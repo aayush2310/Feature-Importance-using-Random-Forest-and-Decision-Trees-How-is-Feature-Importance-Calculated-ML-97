@@ -1,0 +1,21 @@
+import pandas as pd
+import seaborn as sns
+
+df=pd.read_csv('train.csv')
+
+df.head()
+
+x=df.iloc[:,1:]
+y=df.iloc[:,0]
+
+sns.heatmap(x,iloc[5].values.reshape(28,28))
+
+from sklearn.ensemble import RandomForestClassifier
+rf=RandomForestClassifier()
+rf.fit(x,y)
+
+rf.feature_importances_
+
+rf.feature_importances_.shape
+
+sns.heatmap(rf.feature_importances_.reshape(28,28))
