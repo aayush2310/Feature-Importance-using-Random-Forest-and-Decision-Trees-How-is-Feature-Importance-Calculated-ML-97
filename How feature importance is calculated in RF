@@ -1,0 +1,5 @@
+In random forest we have multiple DT,so first write the code for the calculation of feature importance in DT then take the average of all the importances of 0 to get the 
+answer for 0 and similarly for 1.
+
+CODE:-
+
