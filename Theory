@@ -1,0 +1,7 @@
+We are doing tree based algos,the benefit of these is that we can use them to calculate feature importance as well.
+Feature in ML means column,so we need to know the importance of a column.
+In feature selection we select the important features and discard the non-important features which makes our model slow.
+In feature importance we calculate a value(score) of each feature(column) of our dataset and find how much important is that feature for our algo.
+
+eg:-Lets us take a pixel board where each pixel can be 0 or 1 and we use a handwriting classification problem,so the pixels in the centre and towards the center are more 
+    important than those on the periphery,so feature importance and random forest is able to do so.
