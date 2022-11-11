@@ -1,5 +1,49 @@
 In random forest we have multiple DT,so first write the code for the calculation of feature importance in DT then take the average of all the importances of 0 to get the 
-answer for 0 and similarly for 1.
+answer for 0 and similarly for 1.In the feature importance calculations, random forest does nothing extra.Internally decision trees calculate the feature importances.
+Random forest just averages them out.
 
 CODE:-
 
+from sklearn.datasets import make_classification
+from sklearn.tree import DecisionTreeClassifier
+
+x,y=make_classifcation(n_samples=5,n_classes=2,n_features=2,n_informative=2,n_redundant=0,random_state=0)
+
+clf=DecisionTreeClassifier()
+
+clf.fit(x,y)
+
+from sklearn.tree import plot_tree
+plot_tree(clf)
+
+clf.feature_importances_
+
+
+
+from sklearn.ensemble import RandomForestClassifier
+rf=RandomForestClassifier(n_estimators=2)
+rf.fit(x,y)
+
+rf.feature_importances_
+
+print(rf.estimators_[0].feature_importances_)
+print(rf.estimators_[1].feature_importances_)
+
+
+
+
+
+
+
+x,y=make_classification(n_samples=15,n_classes=2,n_features=2,n_informative=2,n_redundant=0,random_state=0)
+
+from sklearn.tree import DecisionTreeClassifier
+
+clf=DecisionTreeClassifier()
+
+clf.fit(x,y)
+
+from sklearn.tree import plot_tree
+plot_tree(clf)
+
+clf.feature_importances_
