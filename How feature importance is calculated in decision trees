@@ -1,0 +1,31 @@
+The importance of a feature is computed as the (normalized) total reduction of the criterion brought by that feature.It is also known as the Gini importance.
+To find the feature importance in decision trees we need to plot the decision tree.
+
+CODE:-
+
+from sklearn.datasets import make_classification
+from sklearn.tree import DecisionTreeClassifier
+
+x,y=make_classifcation(n_samples=5,n_classes=2,n_features=2,n_informative=2,n_redundant=0,random_state=0)
+
+clf=DecisionTreeClassifier()
+
+clf.fit(x,y)
+
+from sklearn.tree import plot_tree
+plot_tree(clf)
+
+clf.feature_importances_
+
+x,y=make_classification(n_samples=15,n_classes=2,n_features=2,n_informative=2,n_redundant=0,random_state=0)
+
+from sklearn.tree import DecisionTreeClassifier
+
+clf=DecisionTreeClassifier()
+
+clf.fit(x,y)
+
+from sklearn.tree import plot_tree
+plot_tree(clf)
+
+clf.feature_importances_
